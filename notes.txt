@@ -1,0 +1,11 @@
+Changed to epoxy library for EGL, idk if this is the way to go TBH
+Try fresh install of OS and then using the existing CMAKE file
+changed all files to be GLES3.h from GLES2.h
+
+Makefile includes for SDL:
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+add_executable(VC6CV main_gl.cpp)
+target_link_libraries(VC6CV ${SDL2_LIBRARIES})
+
+${SDL2_LIBRARIES} in both libraries and gl_libraries
